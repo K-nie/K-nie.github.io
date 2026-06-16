@@ -1,0 +1,18 @@
+# Order of links in the site header.
+# Removing a link hides it from the header without affecting the page itself.
+
+main:
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Talks"
+    url: /talks/
+
+  - title: "Teaching"
+    url: /teaching/
+
+  - title: "Tools"
+    url: /portfolio/
+
+  - title: "CV"
+    url: /cv/

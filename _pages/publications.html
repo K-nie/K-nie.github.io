@@ -1,0 +1,92 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+<!-- Citation and attention badges (loaded once per page) -->
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</div>
+{% endif %}
+
+{% include base_path %}
+
+<style>
+  .pub-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25em;
+    margin: 0.6em 0 1em 0;
+    padding-left: 2.2em;
+    position: relative;
+  }
+  .pub-row .pub-num {
+    position: absolute;
+    left: 0;
+    top: 0.05em;
+    font-weight: 600;
+    min-width: 1.8em;
+  }
+  .pub-row .pub-text {
+    flex: 1 1 auto;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  .pub-row .pub-badges {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+    padding-top: 0.1em;
+  }
+  .pub-row .pub-badges .__dimensions_badge_embed__,
+  .pub-row .pub-badges .altmetric-embed { display: block; }
+  @media (max-width: 600px) {
+    .pub-row { flex-direction: column; padding-left: 0; }
+    .pub-row .pub-num { position: static; }
+    .pub-row .pub-badges { flex-direction: row; }
+  }
+</style>
+
+{% if site.publication_category %}
+  {% for category in site.publication_category %}
+    {% assign title_shown = false %}
+    {% assign idx = 0 %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}{% continue %}{% endif %}
+      {% unless title_shown %}
+        <h2>{{ category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% assign idx = idx | plus: 1 %}
+      {% assign doi = post.paperurl | remove: 'https://doi.org/' | remove: 'http://doi.org/' %}
+      <div class="pub-row">
+        <span class="pub-num">{{ idx }}.</span>
+        <span class="pub-text">{{ post.citation | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+        <span class="pub-badges">
+          <span class="__dimensions_badge_embed__" data-doi="{{ doi }}" data-style="small_circle" data-legend="hover-top"></span>
+          <span class="altmetric-embed" data-badge-popover="bottom" data-badge-type="donut" data-doi="{{ doi }}" data-hide-no-mentions="false"></span>
+        </span>
+      </div>
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% assign idx = 0 %}
+  {% for post in site.publications reversed %}
+    {% assign idx = idx | plus: 1 %}
+    {% assign doi = post.paperurl | remove: 'https://doi.org/' | remove: 'http://doi.org/' %}
+    <div class="pub-row">
+      <span class="pub-num">{{ idx }}.</span>
+      <span class="pub-text">{{ post.citation | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+      <span class="pub-badges">
+        <span class="__dimensions_badge_embed__" data-doi="{{ doi }}" data-style="small_circle" data-legend="hover-top"></span>
+        <span class="altmetric-embed" data-badge-popover="bottom" data-badge-type="donut" data-doi="{{ doi }}" data-hide-no-mentions="false"></span>
+      </span>
+    </div>
+  {% endfor %}
+{% endif %}

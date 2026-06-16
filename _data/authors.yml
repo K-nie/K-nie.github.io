@@ -1,0 +1,9 @@
+# Author profile used by post / publication metadata where an author key is
+# referenced. The site-wide sidebar author block lives in _config.yml.
+
+Benjamin Narh-Madey:
+  name        : "Benjamin Narh-Madey"
+  uri         : "https://k-nie.github.io"
+  email       : "narhmadey@wisc.edu"
+  bio         : "PhD Candidate, Genetics, University of Wisconsin–Madison (Hittinger Lab)."
+  avatar      : "profile.png"

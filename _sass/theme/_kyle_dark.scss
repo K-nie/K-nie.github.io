@@ -1,0 +1,60 @@
+/* ==========================================================================
+   KYLE-INSPIRED THEME - DARK VERSION
+   Deep teal background with cream text. Author: Benjamin Narh-Madey
+   ========================================================================== */
+
+$primary-color              : #4dc9e6;
+$dark-primary-color         : mix(#fff, $primary-color, 25%);
+$darker-primary-color       : mix(#fff, $primary-color, 45%);
+$light-primary-color        : mix(#000, $primary-color, 30%);
+$lighter-primary-color      : mix(#000, $primary-color, 60%);
+$background                 : #0c2f38;
+$background-light           : mix(#fff, $background, 10%);
+$background-lighter         : mix(#fff, $background, 20%);
+$text                       : #fefde1;
+$text-muted                 : mix(#000, $text, 25%);
+$link                       : $primary-color;
+$link-dark                  : $darker-primary-color;
+$link-light                 : $light-primary-color;
+$footer                     : mix(#000, $background, 25%);
+$border                     : mix(#fff, $background, 15%);
+$border-dark                : mix(#fff, $background, 30%);
+
+$danger-color               : #e26a6a;
+$info-color                 : #7eb6d4;
+$notice-color               : #d6a558;
+$success-color              : #8bb874;
+$warning-color              : #e8b945;
+
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 2px rgba(0, 0, 0, 0.30);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+:root {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$footer};
+    --global-border-color               : #{$border};
+    --global-dark-border-color          : #{$border-dark};
+    --global-code-background-color      : #{$background-light};
+    --global-code-text-color            : #{$text-muted};
+    --global-fig-caption-color          : #{$text-muted};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-light};
+    --global-link-color-visited         : #{$link-dark};
+    --global-masthead-link-color        : #{$primary-color};
+    --global-masthead-link-color-hover  : #{$dark-primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #{$text-muted};
+    --global-thead-color                : #{$background-light};
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+    color: inherit;
+}
