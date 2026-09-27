@@ -53,6 +53,14 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$text-muted};
     --global-thead-color                : #{$background-light};
+
+    /* Card / accent tokens used by _custom.scss */
+    --card-bg                           : #ffffff;
+    --card-border                       : #{$border};
+    --card-shadow                       : 0 1px 3px rgba(0, 0, 0, 0.06);
+    --card-shadow-hover                 : 0 8px 24px rgba(0, 0, 0, 0.10);
+    --accent-ring                       : rgba(0, 93, 114, 0.12);
+    --accent-soft                       : rgba(0, 93, 114, 0.08);
 }
 
 .page__footer-follow .social-icons i,

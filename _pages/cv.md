@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "CV"
+description: "Curriculum vitae of Benjamin Narh-Madey — education, research, publications, and skills in genetics and genomics."
 permalink: /cv/
 author_profile: true
 ---
@@ -18,7 +19,7 @@ My research investigates gene regulation, metabolic adaptation, and evolutionary
 ## Education
 
 - **2024 – present** &nbsp;·&nbsp; **Ph.D., Genetics** (Molecular and Statistical Genetics, Computational Biology). University of Wisconsin–Madison. *Hittinger Lab.*
-- **2021 – 2023** &nbsp;·&nbsp; **M.Sc., Genetics.** Department of Genetics and Medical Genetics, University of Wisconsin–Madison.
+- **2024 – 2026** &nbsp;·&nbsp; **M.Sc., Genetics.** Department of Genetics and Medical Genetics, University of Wisconsin–Madison. Majors: mathematical modelling, machine learning, genomics and statistical genetics, and advanced matrix algebra.
 - **2021 – 2023** &nbsp;·&nbsp; **M.Phil., Crop Science (Genetics and Plant Breeding).** Department of Crop Science, University of Ghana. *Advisors: Prof. Pangirayi Tongoona, Dr. Beatrice Elohor Ifie.* Thesis: *Combining ability and heterotic grouping of selected yellow maize (Zea mays) inbred lines for resistance to maize streak virus (MSV).*
 - **2015 – 2019** &nbsp;·&nbsp; **B.Sc., Agriculture, First Class Honours.** Department of Crop Science, University of Cape Coast. *Advisor: Dr. Josiah Tachie-Menson.* Dissertation: *Modelling the response of Cyperus rotundus to light and moisture.*
 - **2006 – 2009** &nbsp;·&nbsp; West African Senior Secondary School Certificate (Agricultural Science). Akro Senior High School.

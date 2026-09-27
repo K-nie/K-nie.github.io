@@ -35,7 +35,9 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-:root {
+/* Scoped to [data-theme="dark"] so the light theme (:root, in _kyle_light.scss)
+   is the default and the theme-toggle button in _main.js actually switches. */
+html[data-theme="dark"] {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$footer};
@@ -52,6 +54,14 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$text-muted};
     --global-thead-color                : #{$background-light};
+
+    /* Card / accent tokens used by _custom.scss */
+    --card-bg                           : #{$background-lighter};
+    --card-border                       : #{$border};
+    --card-shadow                       : 0 1px 3px rgba(0, 0, 0, 0.30);
+    --card-shadow-hover                 : 0 8px 24px rgba(0, 0, 0, 0.45);
+    --accent-ring                       : rgba(77, 201, 230, 0.18);
+    --accent-soft                       : rgba(77, 201, 230, 0.12);
 }
 
 .page__footer-follow .social-icons i,

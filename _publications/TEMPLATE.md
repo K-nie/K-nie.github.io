@@ -21,6 +21,11 @@ date:        2026-09-01
 venue:       "Journal Name"
 paperurl:    "https://doi.org/10.0000/example"
 citation:    "Narh-Madey B, Hittinger CT (2026). Paper title goes here. Journal Name, 12(3), 45-67."
+# Optional: a small figure shown beside the paper. Put the image in /images/
+# and give just the filename here (e.g. cowpea-ssr-teaser.png). Recommended
+# ~600x400 px. Remove this block if you have no figure.
+# header:
+#   teaser: "your-figure.png"
 ---
 
 Optional abstract or short note. Markdown formatting works here. Leave

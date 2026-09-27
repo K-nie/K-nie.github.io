@@ -90,7 +90,7 @@ publication_category:
     title: 'Peer-reviewed publications'
 
 # Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
+teaser                   : profile.png # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
@@ -128,6 +128,8 @@ atom_feed:
 
 
 # SEO Related
+# google_site_verification: paste ONLY the token from Google Search Console
+#   (Settings -> Ownership verification -> HTML tag; the content="..." value).
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
@@ -141,14 +143,19 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : profile.png # Social media default site image (in /images/)
+og_description           : "PhD Candidate, Hittinger Lab, Genetics Graduate Program, University of Wisconsin-Madison. Yeast comparative and evolutionary genomics, machine learning for genomics." # Social media default description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person # Person or Organization (defaults to Person)
+  name                   : "Benjamin Narh-Madey" # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles (feeds schema.org sameAs)
+    - "https://scholar.google.com/citations?user=yNQMeLEAAAAJ&hl=en"
+    - "https://github.com/K-nie"
+    - "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Narh-Madey%22"
+    # - "https://orcid.org/0000-0002-XXXX-XXXX"   # add once you have an ORCID
+    # - "https://www.linkedin.com/in/<handle>/"   # add your LinkedIn
 
 
 # Analytics

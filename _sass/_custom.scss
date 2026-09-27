@@ -1,0 +1,123 @@
+/* ==========================================================================
+   CUSTOM POLISH LAYER
+   Imported last so it overrides theme defaults. Works in light and dark
+   via the --card-* / --accent-* tokens set in _sass/theme/_kyle_*.scss.
+   ========================================================================== */
+
+:root {
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans : "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Typography: serif display headings, sans body ----------------------- */
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4,
+.page__title,
+.archive__item-title,
+.author__name,
+.masthead__menu-item--lg a {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.page__title { line-height: 1.15; }
+
+/* --- Author avatar: circular with a soft accent ring --------------------- */
+.author__avatar img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px var(--accent-ring), 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s ease;
+}
+.author__avatar img:hover {
+  box-shadow: 0 0 0 8px var(--accent-ring), 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* --- Listing entries as cards (publications, talks, portfolio, teaching) -- */
+.archive .list__item,
+.archive .grid__item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 1.1em 1.3em;
+  margin-bottom: 1.15em;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.archive .list__item:hover,
+.archive .grid__item:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+.archive__item-title { margin-top: 0.2em; }
+
+/* Teaser thumbnails inside grid cards */
+.archive .grid__item .archive__item-teaser {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0.8em;
+}
+
+/* --- Pill / tag chips ----------------------------------------------------- */
+.interest-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0.6em 0 1.4em;
+}
+.interest-tags li {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--global-link-color);
+  border-radius: 99px;
+  padding: 0.28em 0.9em;
+  margin: 0 0.4em 0.5em 0;
+  font-size: 0.82em;
+  font-weight: 600;
+}
+
+/* --- CV / call-to-action button ------------------------------------------ */
+.btn--cv {
+  display: inline-block;
+  background: var(--global-base-color);
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 0.55em 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px var(--accent-ring);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn--cv:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px var(--accent-ring);
+}
+
+/* --- News timeline (homepage) -------------------------------------------- */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0 1.5em;
+}
+.news-list li {
+  position: relative;
+  padding: 0 0 1.0em 1.4em;
+  border-left: 2px solid var(--card-border);
+}
+.news-list li:last-child { border-left-color: transparent; }
+.news-list li::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0.35em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--global-base-color);
+}
+.news-list .news-date {
+  font-weight: 700;
+  color: var(--global-text-color-light);
+  margin-right: 0.5em;
+}
