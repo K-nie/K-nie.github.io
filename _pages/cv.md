@@ -62,12 +62,12 @@ See the [Publications page]({{ site.url }}/publications/) for the full list with
 
 ## Research skills
 
-- **Computing**: Linux (Ubuntu, Kali), Windows; HTCondor and high-throughput computing; Docker, Singularity, conda.
-- **Programming**: Python, R, Julia, Perl, Bash, Rust.
-- **Machine learning**: gradient boosting, random forests and SVM, deep learning, CNNs for sequence data, genomic and protein language models, foundation models and transfer learning, graph neural networks, embeddings and UMAP, nested cross-validation, hyperparameter optimization, class-imbalance handling, calibration and conformal prediction, interpretable ML; scikit-learn.
-- **Statistical and quantitative genetics**: GWAS, genomic prediction, Bayesian regression, variance components and heritability, mixed-effects models, multiple-testing correction, effect sizes and power analysis, permutation and resampling tests, selection scans, demographic inference, population structure, linkage disequilibrium, phylogenetic comparative methods.
-- **Wet-lab molecular biology (yeast)**: yeast transformation, CRISPR-Cas9 in yeast, homologous-recombination knockouts, Yeast Toolkit / MoClo cloning, plasmid and vector design, carbon-source growth phenotyping, hexose-transporter uptake assays, yeast media preparation, PCR / RT-PCR / qRT-PCR, HPLC sugar quantification.
-- **Open-source bioinformatics tool development.**
+- **Programming and computing**: Python, R, Rust, Bash, Linux, high-throughput computing.
+- **Genomics and bioinformatics**: comparative genomics, phylogenomics, genome annotation, RNA-seq, tool development.
+- **Statistical and quantitative genetics**: GWAS, genomic prediction, heritability estimation, selection scans, demographic inference, population structure.
+- **Machine learning**: gradient boosting, random forests and SVM, deep learning, language models, foundation models, interpretable ML.
+- **Wet-lab molecular biology (yeast)**: yeast transformation, CRISPR-Cas9 in yeast, molecular cloning, growth phenotyping, PCR / RT-PCR / qRT-PCR, HPLC sugar quantification.
+- **Reproducibility and deployment**: Docker, Singularity, conda, Git and GitHub, reproducibility manifests.
 
 ## Training and workshops
 
