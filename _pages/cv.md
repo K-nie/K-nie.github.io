@@ -62,9 +62,11 @@ See the [Publications page]({{ site.url }}/publications/) for the full list with
 
 ## Research skills
 
-- **Computing**: Linux (Ubuntu, Kali), Windows; HTCondor and high-throughput computing.
+- **Computing**: Linux (Ubuntu, Kali), Windows; HTCondor and high-throughput computing; Docker, Singularity, conda.
 - **Programming**: Python, R, Julia, Perl, Bash, Rust.
-- **Wet-lab molecular biology**: PCR, RT-PCR, qRT-PCR, plasmid design, CRISPR-Cas9.
+- **Machine learning**: gradient boosting (XGBoost, LightGBM), random forests and SVM, deep learning (PyTorch), CNNs for sequence data, genomic and protein language models (ESM-2, Nucleotide Transformer), foundation models and transfer learning, graph neural networks, embeddings and UMAP, nested cross-validation, hyperparameter optimization (Optuna), class-imbalance handling, calibration and conformal prediction, interpretable ML (SHAP, permutation importance); scikit-learn.
+- **Statistical and quantitative genetics**: GWAS with mixed linear models, genomic prediction (GBLUP, ssGBLUP, RR-BLUP), Bayesian regression (BayesA/B/Cπ), variance components and heritability (REML, AI-REML), mixed-effects models, multiple-testing correction (FDR, Holm), effect sizes and power analysis, permutation and resampling tests, selection scans (iHS, XP-EHH, FST, Tajima's D), demographic inference, population structure (PCA, ADMIXTURE), linkage disequilibrium, phylogenetic comparative methods (PGLS, PIC).
+- **Wet-lab molecular biology (yeast)**: yeast transformation (LiAc/PEG, electroporation), CRISPR-Cas9 in yeast, homologous-recombination knockouts (KanMX, hphMX), Yeast Toolkit / MoClo cloning, CEN/ARS and 2µ vector design, tetrad dissection, mating and sporulation, carbon-source growth phenotyping, spot and serial-dilution assays, hexose-transporter uptake assays, SC dropout and minimal media, PCR / RT-PCR / qRT-PCR, HPLC sugar quantification.
 - **Open-source bioinformatics tool development.**
 
 ## Training and workshops
