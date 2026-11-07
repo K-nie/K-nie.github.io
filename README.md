@@ -1,105 +1,38 @@
-# Personal website — Benjamin Narh-Madey
+# k-nie.github.io
 
-Source for my personal academic website. Built on [Jekyll](https://jekyllrb.com)
-with the [academicpages](https://github.com/academicpages/academicpages.github.io)
-template, deployed via GitHub Pages.
+Personal academic website of **Benjamin Narh-Madey**, PhD candidate in the
+Hittinger Lab, Genetics Graduate Program, University of Wisconsin–Madison.
+Live at <https://k-nie.github.io>.
 
-Author: Benjamin Narh-Madey
-PhD candidate, Genetics Graduate Program, University of Wisconsin–Madison
-Hittinger Lab
+The site is plain HTML, CSS and a little JavaScript. There is no build step:
+GitHub Pages serves the files as they are (the `.nojekyll` file turns Jekyll off).
 
-## Layout
+## Files
 
-| Path                 | What it holds                                                |
-|----------------------|--------------------------------------------------------------|
-| `_config.yml`        | Site-wide settings, author profile, social links             |
-| `_pages/about.md`    | Landing page (`/`) bio and current focus                     |
-| `_pages/*.html`      | Landing pages for each collection (publications, talks, ...) |
-| `_publications/`     | One Markdown file per peer-reviewed paper or preprint        |
-| `_talks/`            | One Markdown file per conference talk or poster              |
-| `_teaching/`         | One Markdown file per course or workshop                     |
-| `_portfolio/`        | One Markdown file per tool / software project                |
-| `_posts/`            | One Markdown file per news / update entry                    |
-| `_data/navigation.yml` | Header menu order                                          |
-| `_data/authors.yml`  | Author profile referenced by posts                           |
-| `files/`             | PDFs (papers, posters, CV)                                   |
-| `images/`            | Site images, including `profile.png` (sidebar avatar)        |
+| Path | What it holds |
+|------|---------------|
+| `index.html` | Home page: intro, about, research, publications, tools, news, education, skills |
+| `cv.html` | Full CV (has a Print / PDF button; prints cleanly on paper) |
+| `404.html` | Page shown for broken links |
+| `styles.css` | All styling. Colours are CSS variables at the top, with a dark theme below them |
+| `app.js` | Optional extras: theme toggle, highlighting the current section in the menu, CV print button |
+| `images/` | Portrait (`profile-320/640` in JPEG and WebP; `profile.jpg` is the original), favicons, social preview card `og-card.jpg` |
+| `site.webmanifest`, `robots.txt`, `sitemap.xml` | Metadata for browsers and search engines |
 
-## Local preview
-
-Requires Ruby >= 3.1 and Bundler.
+## Preview locally
 
 ```bash
-bundle install
-bundle exec jekyll serve -l -H 0.0.0.0
+python3 -m http.server 8000
+# open http://localhost:8000
 ```
 
-The site is then available at `http://localhost:4000`. Edits hot-reload on save
-except for changes to `_config.yml`, which require a restart.
+## Common edits
 
-## Publishing to GitHub Pages
-
-When ready to go live:
-
-```bash
-gh repo create K-nie/K-nie.github.io --public --source=. --remote=origin
-git init && git add -A && git commit -m "Initial site"
-git branch -M master
-git push -u origin master
-```
-
-The site will be served at `https://k-nie.github.io` within a few minutes of
-the first push. Repository Settings → Pages should already be configured for
-the `master` branch root.
-
-## Adding content
-
-### A publication
-
-There is a ready-made template at `_publications/TEMPLATE.md`. To add a paper:
-
-1. Copy `_publications/TEMPLATE.md` to `_publications/YYYY-MM-DD-slug.md`
-2. Edit the YAML fields (title, date, venue, DOI, citation)
-3. Set `category:` to `manuscripts` (peer-reviewed) or `preprints`
-4. Delete the `published: false` line so the entry appears on `/publications/`
-5. Save. The local server auto-rebuilds; refresh the browser.
-
-The template stays in the folder with `published: false` so Jekyll skips it but it
-remains discoverable as a reference. Do not delete it.
-
-### A talk or poster
-
-Create `_talks/<YYYY-MM-DD-slug>.md`:
-
-```yaml
----
-title: "Talk title"
-collection: talks
-type: "Talk"
-permalink: /talks/<YYYY-MM-DD-slug>
-venue: "Conference name"
-date: 2026-06-15
-location: "City, Country"
----
-
-Talk description, link to slides PDF in /files/.
-```
-
-### A tool / portfolio entry
-
-Create `_portfolio/<slug>.md` with `collection: portfolio` and a thumbnail
-image referenced from `images/`.
-
-### A news / update post
-
-Create `_posts/<YYYY-MM-DD-slug>.md`. Posts show up on the home page if the
-sidebar `Recent posts` block is enabled in `_config.yml`.
-
-## TODO before launch
-
-- Replace `images/profile.png` with an actual headshot
-- Fill in ORCID, Google Scholar, and LinkedIn URLs in `_config.yml`
-- Confirm `github` username in `_config.yml` author block
-- Add first publications, talks, and tools entries
-- Add CV PDF to `files/CV.pdf` and link from `_pages/cv.md`
-- Create the `K-nie/K-nie.github.io` GitHub repo and push
+- **New paper:** copy an `<li class="entry">` block under *Peer-reviewed articles*
+  in `index.html` (newest first), and add the same reference to the
+  *Publications* list in `cv.html`.
+- **New talk or poster:** same, under *Conference presentations*.
+- **News item:** add an `<li>` at the top of the `news` list in `index.html`.
+- **New portrait:** replace `images/profile.jpg`, then regenerate the four
+  `profile-320/640.{jpg,webp}` files at 320 px and 640 px square.
+- **Colours:** change `--accent` (and the dark-theme `--accent`) at the top of `styles.css`.

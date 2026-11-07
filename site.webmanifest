@@ -1,0 +1,13 @@
+{
+  "name": "Benjamin Narh-Madey",
+  "short_name": "Narh-Madey",
+  "description": "PhD Candidate, Hittinger Lab, Genetics Graduate Program, University of Wisconsin–Madison.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f7f5f0",
+  "theme_color": "#0b6b5d",
+  "icons": [
+    { "src": "/images/favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/favicon-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

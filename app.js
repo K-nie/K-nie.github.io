@@ -1,74 +1,95 @@
+// Small progressive enhancements. The page works fully without this file.
 (function () {
-  // ---------- Theme ----------
   var root = document.documentElement;
-  var btn = document.getElementById('themeBtn');
-  var icon = document.getElementById('themeIcon');
 
-  var SUN = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
-  var MOON = '<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/>';
+  // ---------- Theme toggle ----------
+  // With no stored choice the CSS follows the system setting; a click stores
+  // an explicit "light" or "dark" choice.
+  var dark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
-  function apply(theme) {
-    root.setAttribute('data-theme', theme);
-    if (icon) icon.innerHTML = theme === 'dark' ? SUN : MOON;
+  function current() {
+    var t = root.getAttribute('data-theme');
+    if (t === 'light' || t === 'dark') return t;
+    return dark && dark.matches ? 'dark' : 'light';
   }
 
-  var saved = null;
-  try { saved = localStorage.getItem('theme'); } catch (e) {}
-  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  apply(saved || (prefersDark ? 'dark' : 'light'));
-
-  if (btn) {
-    btn.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      apply(next);
+  var toggles = document.querySelectorAll('.theme-toggle');
+  function sync() {
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', current());
+    toggles.forEach(function (b) {
+      b.setAttribute('aria-label', 'Switch to ' + next + ' theme');
+      var label = b.querySelector('.label');
+      if (label) label.textContent = next === 'dark' ? 'Dark theme' : 'Light theme';
+    });
+  }
+  toggles.forEach(function (b) {
+    b.hidden = false;
+    b.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
+      sync();
+    });
+  });
+  sync();
+  if (dark && dark.addEventListener) {
+    dark.addEventListener('change', function () {
+      var stored = null; try { stored = localStorage.getItem('theme'); } catch (e) {}
+      if (!stored) { root.removeAttribute('data-theme'); sync(); }
     });
   }
 
-  // ---------- Mobile menu ----------
-  var menuBtn = document.getElementById('menuBtn');
-  var topnav = document.getElementById('topnav');
+  // ---------- Print (CV page) ----------
+  var printBtn = document.querySelector('[data-print]');
+  if (printBtn) {
+    printBtn.hidden = false;
+    printBtn.addEventListener('click', function () { window.print(); });
+  }
 
-  if (menuBtn && topnav) {
-    menuBtn.addEventListener('click', function () {
-      topnav.classList.toggle('open');
-    });
-    topnav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') topnav.classList.remove('open');
+  // ---------- Current section in the nav ----------
+  var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a[href^="#"]'));
+  var sections = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+
+  function mark(id) {
+    links.forEach(function (a) {
+      var on = a.getAttribute('href') === '#' + id;
+      if (on) {
+        a.setAttribute('aria-current', 'true');
+        // keep the active pill visible in the scrollable phone nav
+        var ul = a.closest('ul');
+        if (ul && ul.scrollWidth > ul.clientWidth) {
+          var l = a.offsetLeft, r = l + a.offsetWidth;
+          if (l < ul.scrollLeft || r > ul.scrollLeft + ul.clientWidth) ul.scrollLeft = l - 16;
+        }
+      } else {
+        a.removeAttribute('aria-current');
+      }
     });
   }
 
-  // ---------- Scrollspy ----------
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.topnav a[data-sec]'));
-  var byId = {};
-  navLinks.forEach(function (a) { byId[a.getAttribute('data-sec')] = a; });
-
-  var sections = navLinks
-    .map(function (a) { return document.getElementById(a.getAttribute('data-sec')); })
-    .filter(Boolean);
-
-  function setActive(id) {
-    navLinks.forEach(function (a) {
-      a.classList.toggle('active', a.getAttribute('data-sec') === id);
-    });
-  }
-
-  if ('IntersectionObserver' in window && sections.length) {
-    var visible = {};
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        visible[en.target.id] = en.isIntersecting ? en.intersectionRatio : 0;
-      });
-      var best = null, bestRatio = 0;
-      Object.keys(visible).forEach(function (id) {
-        if (visible[id] > bestRatio) { bestRatio = visible[id]; best = id; }
-      });
-      if (best && byId[best]) setActive(best);
-    }, { rootMargin: '-45% 0px -45% 0px', threshold: [0, 0.25, 0.5, 1] });
-    sections.forEach(function (s) { io.observe(s); });
+  if (sections.every(Boolean) && sections.length) {
+    var ticking = false;
+    var update = function () {
+      ticking = false;
+      // active = last section whose top has passed 35% of the viewport;
+      // at the very bottom of the page, the last section
+      var line = window.innerHeight * 0.35, active = null;
+      sections.forEach(function (s) { if (s.getBoundingClientRect().top <= line) active = s.id; });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        active = sections[sections.length - 1].id;
+      }
+      if (active) mark(active); else links.forEach(function (a) { a.removeAttribute('aria-current'); });
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
   }
 
   // ---------- Year ----------
-  var y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
+  document.querySelectorAll('[data-year]').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
 })();
