@@ -11,7 +11,7 @@ GitHub Pages serves the files as they are (the `.nojekyll` file turns Jekyll off
 
 | Path | What it holds |
 |------|---------------|
-| `index.html` | Home page: intro, about, research, publications, software, background |
+| `index.html` | Home page: intro, about, research, publications, software |
 | `cv.html` | Full CV (has a Print / PDF button; prints cleanly on paper) |
 | `404.html` | Page shown for broken links |
 | `styles.css` | All styling. Colours are CSS variables at the top, with a dark theme below them |

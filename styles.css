@@ -194,15 +194,6 @@ a.ref-title:hover { color: var(--accent); }
 .software p { font-size: .96rem; color: var(--muted); }
 .software .links { margin: auto 0 0; display: flex; gap: 1.1rem; font-weight: 700; font-size: .92rem; }
 
-/* Background */
-.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3rem; }
-.cols .subhead:first-child { margin-top: 0; }
-.plain { display: grid; gap: .7rem; }
-.plain li { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr); gap: .8rem; font-size: .96rem; line-height: 1.5; color: var(--muted); }
-.plain strong { color: var(--ink); font-weight: 700; }
-.yr { font-family: var(--mono); font-size: .82rem; color: var(--faint); padding-top: .1rem; }
-.cols .note { margin-top: 1.4rem; }
-
 /* Footer */
 .site-foot { border-top: 1px solid var(--line); padding: 2rem 0 2.5rem; font-size: .9rem; color: var(--muted); }
 .foot-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
@@ -223,8 +214,7 @@ a.ref-title:hover { color: var(--accent); }
 
   .hero-inner { grid-template-columns: 1fr; }
   .hero-photo img { width: 112px; height: 112px; }
-  .interests, .software, .cols { grid-template-columns: 1fr; }
-  .cols > div + div { margin-top: 2rem; }
+  .interests, .software { grid-template-columns: 1fr; }
 }
 
 /* ---------- CV page ---------- */
