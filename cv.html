@@ -1,123 +1,171 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CV — Benjamin Narh-Madey</title>
-  <meta name="description" content="Curriculum vitae of Benjamin Narh-Madey — education, research, publications, and skills in genetics and genomics.">
+  <title>CV · Benjamin Narh-Madey</title>
+  <meta name="description" content="Curriculum vitae of Benjamin Narh-Madey: education, experience, awards, publications, presentations, software, and skills in genetics and genomics.">
   <meta name="author" content="Benjamin Narh-Madey">
   <link rel="canonical" href="https://k-nie.github.io/cv.html">
-  <meta name="robots" content="index, follow">
 
-  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-  <link rel="icon" href="/images/favicon.ico">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="CV · Benjamin Narh-Madey">
+  <meta property="og:description" content="Curriculum vitae of Benjamin Narh-Madey, PhD Candidate in Genetics at UW–Madison.">
+  <meta property="og:url" content="https://k-nie.github.io/cv.html">
+  <meta property="og:image" content="https://k-nie.github.io/images/og-card.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121615" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/images/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png">
+  <link rel="manifest" href="/site.webmanifest">
+
   <script>
     (function () {
-      var s = null; try { s = localStorage.getItem('theme'); } catch (e) {}
-      var d = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.setAttribute('data-theme', s || (d ? 'dark' : 'light'));
+      var t = null; try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="cv-page">
-  <a class="cv-back" href="/">
-    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-    Back to home
-  </a>
+<a class="skip-link" href="#content">Skip to content</a>
 
-  <h1>Benjamin Narh-Madey</h1>
-  <p class="cv-contact">
-    PhD Candidate, Hittinger Lab, Genetics Graduate Program, University of Wisconsin–Madison<br>
-    <a href="mailto:narhmadey@wisc.edu">narhmadey@wisc.edu</a> ·
-    <a href="https://orcid.org/0000-0002-6422-2521" target="_blank" rel="noopener">ORCID</a> ·
-    <a href="https://www.linkedin.com/in/benjamin-narh-madey-6089b4349/" target="_blank" rel="noopener">LinkedIn</a> ·
-    <a href="https://github.com/K-nie" target="_blank" rel="noopener">GitHub</a> ·
-    <a href="https://scholar.google.com/citations?user=yNQMeLEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-  </p>
+<header class="cv-bar">
+  <div class="cv-bar-inner">
+    <a class="back" href="/">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Home
+    </a>
+    <button class="btn-quiet" type="button" data-print hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+      Print / PDF
+    </button>
+    <button class="theme-toggle" type="button" hidden aria-label="Switch to dark theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <span class="label">Dark theme</span>
+    </button>
+  </div>
+</header>
 
-  <h2>Research interests</h2>
-  <p>My research investigates gene regulation, metabolic adaptation, and evolutionary processes in yeast. I combine genetics, comparative genomics, and machine learning on large-scale phylogenomic datasets to study how yeast strains gain and lose the capacity to metabolize alternative carbon sources. I focus on uncovering the regulatory and evolutionary basis of sugar metabolism — particularly mannose and the hexose-transporter family — and on building open-source software that helps researchers identify yeast strains with unusual metabolic capabilities and the genes that drive them. The work sits at the intersection of comparative genomics, predictive modelling, and empirical genetics, with applications in metabolic engineering, synthetic biology, and industrial fermentation.</p>
+<main class="cv" id="content">
+  <div class="cv-head">
+    <h1>Benjamin <span class="nowrap">Narh-Madey</span></h1>
+    <p>PhD Candidate, Hittinger Lab, Genetics Graduate Program, University of Wisconsin–Madison</p>
+    <ul class="cv-links">
+      <li><a href="mailto:narhmadey@wisc.edu">narhmadey@wisc.edu</a></li>
+      <li><a href="https://orcid.org/0000-0002-6422-2521">ORCID</a></li>
+      <li><a href="https://www.linkedin.com/in/benjamin-narh-madey-6089b4349/">LinkedIn</a></li>
+      <li><a href="https://github.com/K-nie">GitHub</a></li>
+      <li><a href="https://scholar.google.com/citations?user=yNQMeLEAAAAJ&amp;hl=en">Google Scholar</a></li>
+    </ul>
+  </div>
 
-  <h2>Education</h2>
-  <ul>
-    <li><strong>2024 – present · Ph.D., Genetics</strong> (Molecular and Statistical Genetics, Computational Biology). Department of Genetics and Medical Genetics, University of Wisconsin–Madison. <em>Hittinger Lab.</em></li>
-    <li><strong>2024 – 2026 · M.Sc., Genetics.</strong> Department of Genetics and Medical Genetics, University of Wisconsin–Madison. <em>Majors: mathematical modelling, machine learning, genomics and statistical genetics, and advanced matrix algebra.</em></li>
-    <li><strong>2021 – 2023 · M.Phil., Crop Science (Genetics and Plant Breeding).</strong> Department of Crop Science, University of Ghana. <em>Advisors: Prof. Pangirayi Tongoona, Dr. Beatrice Elohor Ifie.</em> Thesis: <em>Combining ability and heterotic grouping of selected yellow maize (Zea mays) inbred lines for resistance to maize streak virus (MSV).</em></li>
-    <li><strong>2015 – 2019 · B.Sc., Agriculture, First Class Honours.</strong> Department of Crop Science, University of Cape Coast. <em>Advisor: Dr. Josiah Tachie-Menson.</em> Dissertation: <em>Modelling the response of Cyperus rotundus to light and moisture.</em></li>
-    <li><strong>2006 – 2009 ·</strong> West African Senior Secondary School Certificate (Agricultural Science). Akro Senior High School.</li>
-  </ul>
+  <section aria-labelledby="cv-interests">
+    <h2 id="cv-interests">Research interests</h2>
+    <p>My research investigates gene regulation, metabolic adaptation, and evolutionary processes in yeast. I combine genetics, comparative genomics, and machine learning on large-scale phylogenomic datasets to study how yeast strains gain and lose the capacity to metabolize alternative carbon sources. I focus on uncovering the regulatory and evolutionary basis of sugar metabolism, particularly mannose and the hexose-transporter family, and on building open-source software that helps researchers identify yeast strains with unusual metabolic capabilities and the genes that drive them. The work sits at the intersection of comparative genomics, predictive modelling, and empirical genetics, with applications in metabolic engineering, synthetic biology, and industrial fermentation.</p>
+  </section>
 
-  <h2>Professional experience</h2>
-  <ul>
-    <li><strong>2023 · Graduate Research Assistant</strong>, West Africa Centre for Crop Improvement (WACCI) and Biotechnology Centre, University of Ghana. Field and greenhouse experimental design (maize, rice, sorghum); pollination, bagging, harvesting; DNA/RNA extraction, PCR and gel electrophoresis; protein purification and cDNA synthesis; manuscript preparation.</li>
-    <li><strong>2021 · Intern</strong>, Legacy Crop Improvement Center (LCIC), Ghana. Field trial design for maize and sorghum; three-way maize hybrid development programme.</li>
-    <li><strong>2019 · Intern</strong>, Department of Crop Science, University of Cape Coast. Undergraduate teaching, exam invigilation and grading, distance-education teaching support, supervision of undergraduates, field research planning and analysis.</li>
-    <li><strong>2018 · Intern</strong>, Ministry of Food and Agriculture (MoFA), Ghana. Extension services and farmer training on fall armyworm (<em>Spodoptera frugiperda</em>) control, safe pesticide use, mango grafting, and inventory management.</li>
-    <li><strong>2016 – 2023 · STEM Teacher</strong>, Citadel Home Tuition Services, Ghana. Maths, Biology, Physics and Chemistry tuition and assessment.</li>
-    <li><strong>2010 – 2014 · Pesticide Team Lead</strong>, Golden Exotics Ltd. (Kasunya Estates), Ghana. Tractor-mounted spraying on banana plantations; scouting for Sigatoka, banana aphids (<em>Pentalonia nigronervosa</em>), and banana rust thrips (<em>Chaetanophothrips signipennis</em>).</li>
-  </ul>
+  <section aria-labelledby="cv-edu">
+    <h2 id="cv-edu">Education</h2>
+    <ul class="cv-list">
+      <li><span class="when">2024 – present</span><span class="head">Ph.D., Genetics</span> (Molecular and Statistical Genetics, Computational Biology). Department of Genetics and Medical Genetics, University of Wisconsin–Madison. <em>Hittinger Lab.</em></li>
+      <li><span class="when">2024 – 2026</span><span class="head">M.Sc., Genetics.</span> Department of Genetics and Medical Genetics, University of Wisconsin–Madison.<span class="detail">Majors: mathematical modelling, machine learning, genomics and statistical genetics, and advanced matrix algebra.</span></li>
+      <li><span class="when">2021 – 2023</span><span class="head">M.Phil., Crop Science (Genetics and Plant Breeding).</span> Department of Crop Science, University of Ghana.<span class="detail">Advisors: Prof. Pangirayi Tongoona, Dr. Beatrice Elohor Ifie. Thesis: <em>Combining ability and heterotic grouping of selected yellow maize (Zea mays) inbred lines for resistance to maize streak virus (MSV).</em></span></li>
+      <li><span class="when">2015 – 2019</span><span class="head">B.Sc., Agriculture, First Class Honours.</span> Department of Crop Science, University of Cape Coast.<span class="detail">Advisor: Dr. Josiah Tachie-Menson. Dissertation: <em>Modelling the response of Cyperus rotundus to light and moisture.</em></span></li>
+      <li><span class="when">2006 – 2009</span><span class="head">West African Senior Secondary School Certificate</span> (Agricultural Science). Akro Senior High School.</li>
+    </ul>
+  </section>
 
-  <h2>Grants and awards</h2>
-  <ul>
-    <li>Stone Travel Award, Department of Genetics, UW–Madison.</li>
-    <li>JR Biotek – Plant Cell Atlas African Ph.D. Scholars Mentorship Programme.</li>
-    <li>World Bank ACE Impact Funding, University of Ghana.</li>
-    <li>Ghana National Petroleum Commission (GNPC) Scholarship, University of Ghana.</li>
-    <li>USAID Feed-the-Future and Africa Lead — Champions for Change Leadership Workshop on Food Security.</li>
-  </ul>
+  <section aria-labelledby="cv-exp">
+    <h2 id="cv-exp">Professional experience</h2>
+    <ul class="cv-list">
+      <li><span class="when">2023</span><span class="head">Graduate Research Assistant</span>, West Africa Centre for Crop Improvement (WACCI) and Biotechnology Centre, University of Ghana.<span class="detail">Field and greenhouse experimental design (maize, rice, sorghum); pollination, bagging, harvesting; DNA/RNA extraction, PCR and gel electrophoresis; protein purification and cDNA synthesis; manuscript preparation.</span></li>
+      <li><span class="when">2021</span><span class="head">Intern</span>, Legacy Crop Improvement Center (LCIC), Ghana.<span class="detail">Field trial design for maize and sorghum; three-way maize hybrid development programme.</span></li>
+      <li><span class="when">2019</span><span class="head">Intern</span>, Department of Crop Science, University of Cape Coast.<span class="detail">Undergraduate teaching, exam invigilation and grading, distance-education teaching support, supervision of undergraduates, field research planning and analysis.</span></li>
+      <li><span class="when">2018</span><span class="head">Intern</span>, Ministry of Food and Agriculture (MoFA), Ghana.<span class="detail">Extension services and farmer training on fall armyworm (<em>Spodoptera frugiperda</em>) control, safe pesticide use, mango grafting, and inventory management.</span></li>
+      <li><span class="when">2016 – 2023</span><span class="head">STEM Teacher</span>, Citadel Home Tuition Services, Ghana.<span class="detail">Maths, Biology, Physics and Chemistry tuition and assessment.</span></li>
+      <li><span class="when">2010 – 2014</span><span class="head">Pesticide Team Lead</span>, Golden Exotics Ltd. (Kasunya Estates), Ghana.<span class="detail">Tractor-mounted spraying on banana plantations; scouting for Sigatoka, banana aphids (<em>Pentalonia nigronervosa</em>), and banana rust thrips (<em>Chaetanophothrips signipennis</em>).</span></li>
+    </ul>
+  </section>
 
-  <h2>Publications</h2>
-  <ul>
-    <li>Komolafe A.O., Bello O.B., Coffie S.A., <strong>Narh-Madey B.</strong>, Elebo A., Adekoya M.A., et al. (2026). Molecular characterization and genetic diversity of Nigerian cowpea accessions using SSR markers. <em>Discover Plants</em>. <a href="https://doi.org/10.1007/s44372-026-00618-9" target="_blank" rel="noopener">DOI</a>.</li>
-    <li>Forchibe E.E., Fening K.O., <strong>Narh-Madey B.</strong>, Afreh-Nuamah K., Cobblah M.A., et al. (2023). Weather, phenology, and predator effects on the seasonal variation of aphids on cabbage. <em>Journal of Applied Entomology</em>, 147(4), 261–270. <a href="https://doi.org/10.1111/jen.13106" target="_blank" rel="noopener">DOI</a>.</li>
-  </ul>
+  <section aria-labelledby="cv-awards">
+    <h2 id="cv-awards">Grants and awards</h2>
+    <ul class="cv-list compact">
+      <li>Stone Travel Award, Department of Genetics, UW–Madison.</li>
+      <li>JR Biotek – Plant Cell Atlas African Ph.D. Scholars Mentorship Programme.</li>
+      <li>World Bank ACE Impact Funding, University of Ghana.</li>
+      <li>Ghana National Petroleum Commission (GNPC) Scholarship, University of Ghana.</li>
+      <li>USAID Feed-the-Future and Africa Lead, Champions for Change Leadership Workshop on Food Security.</li>
+    </ul>
+  </section>
 
-  <h2>Conference presentations</h2>
-  <ul>
-    <li><strong>Narh-Madey B.</strong>, Horianopoulos L., Rokas A., Hittinger C.T. (2026). <em>Beyond Glucose: Machine Learning Identifies Genetic Determinants of Mannose Metabolism Across More Than 1,000 Yeast Species.</em> Population, Evolutionary, and Quantitative Genetics (PEQG) Conference, Genetics Society of America, Asilomar, CA. <a href="https://doi.org/10.5281/zenodo.20712169" target="_blank" rel="noopener">DOI</a>.</li>
-    <li><strong>Narh-Madey B.</strong>, Ifie E.E., Tongoona P.B., Danquah E.Y. (2023). <em>Combining ability and heterotic group studies for grain yield and resistance to maize streak virus disease in yellow maize (Zea mays L.).</em> 3rd African Plant Breeders Association (APBA) Conference, Benguerir, Morocco.</li>
-  </ul>
+  <section aria-labelledby="cv-pubs">
+    <h2 id="cv-pubs">Publications</h2>
+    <ul class="cv-list">
+      <li>Komolafe A.O., Bello O.B., Coffie S.A., <strong>Narh-Madey B.</strong>, Elebo A., Adekoya M.A., et al. (2026). Molecular characterization and genetic diversity of Nigerian cowpea accessions using SSR markers. <em>Discover Plants</em>. <a href="https://doi.org/10.1007/s44372-026-00618-9">doi:10.1007/s44372-026-00618-9</a></li>
+      <li>Forchibe E.E., Fening K.O., <strong>Narh-Madey B.</strong>, Afreh-Nuamah K., Cobblah M.A., et al. (2023). Weather, phenology, and predator effects on the seasonal variation of aphids on cabbage. <em>Journal of Applied Entomology</em>, 147(4), 261–270. <a href="https://doi.org/10.1111/jen.13106">doi:10.1111/jen.13106</a></li>
+    </ul>
+  </section>
 
-  <h2>Software development</h2>
-  <ul>
-    <li><strong>gfc (Genome Format Converters)</strong> — a unified Python CLI for 30 bioinformatics file-format conversions, benchmarked against the standard single-purpose tools. <a href="https://github.com/K-nie/genome-format-converters" target="_blank" rel="noopener">Repository</a>.</li>
-    <li><strong>myconote</strong> — a high-performance Rust pipeline for fungal genome annotation from assembly through NCBI submission, with an integrated RNA-seq and allele-specific-expression stack. <a href="https://github.com/K-nie/myconote-cli" target="_blank" rel="noopener">Repository</a>.</li>
-    <li><strong>Maize Base Index Calculator</strong> — an online tool that predicts maize performance under environmental conditions using artificial neural networks.</li>
-  </ul>
+  <section aria-labelledby="cv-talks">
+    <h2 id="cv-talks">Conference presentations</h2>
+    <ul class="cv-list">
+      <li><strong>Narh-Madey B.</strong>, Horianopoulos L., Rokas A., Hittinger C.T. (2026). <em>Beyond Glucose: Machine Learning Identifies Genetic Determinants of Mannose Metabolism Across More Than 1,000 Yeast Species.</em> Population, Evolutionary, and Quantitative Genetics (PEQG) Conference, Genetics Society of America, Asilomar, CA. <a href="https://doi.org/10.5281/zenodo.20712169">doi:10.5281/zenodo.20712169</a></li>
+      <li><strong>Narh-Madey B.</strong>, Ifie E.E., Tongoona P.B., Danquah E.Y. (2023). <em>Combining ability and heterotic group studies for grain yield and resistance to maize streak virus disease in yellow maize (Zea mays L.).</em> 3rd African Plant Breeders Association (APBA) Conference, Benguerir, Morocco.</li>
+    </ul>
+  </section>
 
-  <h2>Research skills</h2>
-  <ul>
-    <li><strong>Programming &amp; computing:</strong> Python, R, Rust, Bash, Linux, high-throughput computing.</li>
-    <li><strong>Genomics &amp; bioinformatics:</strong> comparative genomics, phylogenomics, genome annotation, RNA-seq, tool development.</li>
-    <li><strong>Statistical &amp; quantitative genetics:</strong> GWAS, genomic prediction, heritability estimation, selection scans, demographic inference, population structure.</li>
-    <li><strong>Machine learning:</strong> gradient boosting, random forests and SVM, deep learning, language models, foundation models, interpretable ML.</li>
-    <li><strong>Wet-lab molecular biology (yeast):</strong> yeast transformation, CRISPR-Cas9 in yeast, molecular cloning, growth phenotyping, PCR / RT-PCR / qRT-PCR, HPLC sugar quantification.</li>
-    <li><strong>Reproducibility &amp; deployment:</strong> Docker, Singularity, conda, Git and GitHub, reproducibility manifests.</li>
-  </ul>
+  <section aria-labelledby="cv-soft">
+    <h2 id="cv-soft">Software development</h2>
+    <ul class="cv-list">
+      <li><span class="head">gfc (Genome Format Converters)</span>: a unified Python CLI for 30 bioinformatics file-format conversions, benchmarked against the standard single-purpose tools. <a href="https://github.com/K-nie/genome-format-converters">Repository</a></li>
+      <li><span class="head">myconote</span>: a high-performance Rust pipeline for fungal genome annotation from assembly through NCBI submission, with an integrated RNA-seq and allele-specific-expression stack. <a href="https://github.com/K-nie/myconote-cli">Repository</a></li>
+      <li><span class="head">Maize Base Index Calculator</span>: an online tool that predicts maize performance under environmental conditions using artificial neural networks.</li>
+    </ul>
+  </section>
 
-  <h2>Memberships</h2>
-  <ul>
-    <li>Computational Biology, Ecology and Evolution (ComBEE), UW–Madison.</li>
-    <li>Mycological Society of America (MSA); Genetics Society of America (GSA).</li>
-    <li>Black in Artificial Intelligence (AI); R/Posit Community.</li>
-    <li>Ghana Science Association; Graduate Students' Association of Ghana.</li>
-  </ul>
+  <section aria-labelledby="cv-skills">
+    <h2 id="cv-skills">Research skills</h2>
+    <ul class="cv-list compact">
+      <li><span class="head">Programming &amp; computing:</span> Python, R, Rust, Bash, Linux, high-throughput computing.</li>
+      <li><span class="head">Genomics &amp; bioinformatics:</span> comparative genomics, phylogenomics, genome annotation, RNA-seq, tool development.</li>
+      <li><span class="head">Statistical &amp; quantitative genetics:</span> GWAS, genomic prediction, heritability estimation, selection scans, demographic inference, population structure.</li>
+      <li><span class="head">Machine learning:</span> gradient boosting, random forests and SVM, deep learning, language models, foundation models, interpretable ML.</li>
+      <li><span class="head">Wet-lab molecular biology (yeast):</span> yeast transformation, CRISPR-Cas9 in yeast, molecular cloning, growth phenotyping, PCR / RT-PCR / qRT-PCR, HPLC sugar quantification.</li>
+      <li><span class="head">Reproducibility &amp; deployment:</span> Docker, Singularity, conda, Git and GitHub, reproducibility manifests.</li>
+    </ul>
+  </section>
 
-  <h2>Service and leadership</h2>
-  <ul>
-    <li><strong>Founder and Director</strong>, SparkSTEM Foundation.</li>
-    <li><strong>Project Coordinator, Ghana</strong>, JR Biotek Foundation (USA) and JR Biotek UK CIC.</li>
-    <li><strong>Board Member</strong>, The Pearl (NGO), Atua, Odumase-Krobo.</li>
-    <li><strong>Volunteer</strong>, Wisconsin Science Expedition, UW–Madison.</li>
-  </ul>
+  <section aria-labelledby="cv-members">
+    <h2 id="cv-members">Memberships</h2>
+    <ul class="cv-list compact">
+      <li>Computational Biology, Ecology and Evolution (ComBEE), UW–Madison.</li>
+      <li>Mycological Society of America (MSA); Genetics Society of America (GSA).</li>
+      <li>Black in Artificial Intelligence (AI); R/Posit Community.</li>
+      <li>Ghana Science Association; Graduate Students' Association of Ghana.</li>
+    </ul>
+  </section>
 
-  <p class="cv-contact" style="margin-top:2rem;">References available upon request.</p>
-</div>
+  <section aria-labelledby="cv-service">
+    <h2 id="cv-service">Service and leadership</h2>
+    <ul class="cv-list compact">
+      <li><span class="head">Founder and Director</span>, SparkSTEM Foundation.</li>
+      <li><span class="head">Project Coordinator, Ghana</span>, JR Biotek Foundation (USA) and JR Biotek UK CIC.</li>
+      <li><span class="head">Board Member</span>, The Pearl (NGO), Atua, Odumase-Krobo.</li>
+      <li><span class="head">Volunteer</span>, Wisconsin Science Expedition, UW–Madison.</li>
+    </ul>
+  </section>
+
+  <p class="cv-note">References available upon request.</p>
+</main>
+
+<script src="/app.js" defer></script>
 </body>
 </html>
