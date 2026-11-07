@@ -11,7 +11,7 @@ GitHub Pages serves the files as they are (the `.nojekyll` file turns Jekyll off
 
 | Path | What it holds |
 |------|---------------|
-| `index.html` | Home page: intro, about, research, publications, tools, news, education, skills |
+| `index.html` | Home page: intro, about, research, publications, software, background |
 | `cv.html` | Full CV (has a Print / PDF button; prints cleanly on paper) |
 | `404.html` | Page shown for broken links |
 | `styles.css` | All styling. Colours are CSS variables at the top, with a dark theme below them |
@@ -32,7 +32,6 @@ python3 -m http.server 8000
   in `index.html` (newest first), and add the same reference to the
   *Publications* list in `cv.html`.
 - **New talk or poster:** same, under *Conference presentations*.
-- **News item:** add an `<li>` at the top of the `news` list in `index.html`.
 - **New portrait:** replace `images/profile.jpg`, then regenerate the four
   `profile-320/640.{jpg,webp}` files at 320 px and 640 px square.
 - **Colours:** change `--accent` (and the dark-theme `--accent`) at the top of `styles.css`.
